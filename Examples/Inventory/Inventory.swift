@@ -1,4 +1,5 @@
 import IdentifiedCollections
+import NavigationBackport
 import SwiftUI
 import SwiftUINavigation
 
@@ -83,7 +84,7 @@ struct InventoryView: View {
       }
     }
     .navigationTitle("Inventory")
-    .navigationDestination(
+    .navigationDestinationBackported(
       unwrapping: self.$model.destination,
       case: /InventoryModel.Destination.edit
     ) { $item in
@@ -107,7 +108,7 @@ struct InventoryView: View {
       unwrapping: self.$model.destination,
       case: /InventoryModel.Destination.add
     ) { $itemToAdd in
-      NavigationStack {
+      NBNavigationStack {
         ItemView(item: $itemToAdd)
           .navigationTitle("Add")
           .toolbar {
@@ -127,7 +128,7 @@ struct InventoryView_Previews: PreviewProvider {
   static var previews: some View {
     let keyboard = Item(color: .blue, name: "Keyboard", status: .inStock(quantity: 100))
 
-    NavigationStack {
+    NBNavigationStack {
       InventoryView(
          model: InventoryModel(
           inventory: [

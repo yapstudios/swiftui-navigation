@@ -11,6 +11,15 @@
         }
       },
       {
+        "package": "NavigationBackport",
+        "repositoryURL": "https://github.com/johnpatrickmorgan/NavigationBackport.git",
+        "state": {
+          "branch": null,
+          "revision": "f8930907304f03e589487c0158924d49c2a7ae83",
+          "version": "0.8.1"
+        }
+      },
+      {
         "package": "swift-case-paths",
         "repositoryURL": "https://github.com/pointfreeco/swift-case-paths",
         "state": {
@@ -44,6 +53,15 @@
           "branch": null,
           "revision": "819d9d370cd721c9d87671e29d947279292e4541",
           "version": "0.6.0"
+        }
+      },
+      {
+        "package": "swift-dependencies",
+        "repositoryURL": "http://github.com/pointfreeco/swift-dependencies",
+        "state": {
+          "branch": null,
+          "revision": "6bb1034e8a1bfbf46dfb766b6c09b7b17e1cba10",
+          "version": "0.2.0"
         }
       },
       {
