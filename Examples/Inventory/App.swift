@@ -1,3 +1,4 @@
+import NavigationBackport
 import SwiftUI
 
 @main
@@ -24,6 +25,7 @@ struct InventoryApp: App {
   var body: some Scene {
     WindowGroup {
       AppView(model: self.model)
+            .nbUseNavigationStack(.whenAvailable)
     }
   }
 }
@@ -61,7 +63,7 @@ struct AppView: View {
         Label("First", systemImage: "arrow.forward")
       }
 
-      NavigationStack {
+      NBNavigationStack {
         InventoryView(model: self.model.inventoryModel)
       }
       .tag(AppModel.Tab.inventory)

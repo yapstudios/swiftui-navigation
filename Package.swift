@@ -1,11 +1,11 @@
-// swift-tools-version:5.5
+// swift-tools-version:5.7
 
 import PackageDescription
 
 let package = Package(
   name: "swiftui-navigation",
   platforms: [
-    .iOS(.v13),
+    .iOS(.v14),
     .macOS(.v10_15),
     .tvOS(.v13),
     .watchOS(.v6),
@@ -25,8 +25,17 @@ let package = Package(
     .package(url: "https://github.com/pointfreeco/swift-case-paths", from: "1.0.0"),
     .package(url: "https://github.com/pointfreeco/swift-custom-dump", from: "1.0.0"),
     .package(url: "https://github.com/pointfreeco/xctest-dynamic-overlay", from: "1.0.0"),
+    .package(url: "https://github.com/johnpatrickmorgan/NavigationBackport.git", exact: "0.8.1")
   ],
   targets: [
+    .target(
+      name: "_SwiftUINavigationState",
+      dependencies: [
+        .product(name: "CustomDump", package: "swift-custom-dump"),
+        .product(name: "NavigationBackport", package: "NavigationBackport"),
+        .product(name: "XCTestDynamicOverlay", package: "xctest-dynamic-overlay"),
+      ]
+    ),
     .target(
       name: "SwiftUINavigation",
       dependencies: [

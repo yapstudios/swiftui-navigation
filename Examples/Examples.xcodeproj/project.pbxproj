@@ -55,6 +55,7 @@
 		DCE73E082947D082004EE92E /* IdentifiedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = DCE73E072947D082004EE92E /* IdentifiedCollections */; };
 		DCE73E0A2947D090004EE92E /* IdentifiedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = DCE73E092947D090004EE92E /* IdentifiedCollections */; };
 		DCE73E0C2947D163004EE92E /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE73E0B2947D163004EE92E /* DataManager.swift */; };
+		EF9AB64229D2841600884E0E /* NavigationBackport in Frameworks */ = {isa = PBXBuildFile; productRef = EF9AB64129D2841600884E0E /* NavigationBackport */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +134,7 @@
 			files = (
 				CA4737F4272F09780012CAC3 /* SwiftUINavigation in Frameworks */,
 				DCE73E0A2947D090004EE92E /* IdentifiedCollections in Frameworks */,
+				EF9AB64229D2841600884E0E /* NavigationBackport in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +336,7 @@
 			packageProductDependencies = (
 				CA4737F3272F09780012CAC3 /* SwiftUINavigation */,
 				DCE73E092947D090004EE92E /* IdentifiedCollections */,
+				EF9AB64129D2841600884E0E /* NavigationBackport */,
 			);
 			productName = Inventory;
 			productReference = CA4737C8272F095F0012CAC3 /* Inventory.app */;
@@ -464,6 +467,7 @@
 				DCE73E032947D063004EE92E /* XCRemoteSwiftPackageReference "swift-tagged" */,
 				DCE73E062947D082004EE92E /* XCRemoteSwiftPackageReference "swift-identified-collections" */,
 				CA6453982968A06E00802931 /* XCRemoteSwiftPackageReference "swift-dependencies" */,
+				EF9AB64029D2841600884E0E /* XCRemoteSwiftPackageReference "NavigationBackport" */,
 			);
 			productRefGroup = CA473795272F08EF0012CAC3 /* Products */;
 			projectDirPath = "";
@@ -742,7 +746,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -772,7 +776,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1075,6 +1079,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		EF9AB64029D2841600884E0E /* XCRemoteSwiftPackageReference "NavigationBackport" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/johnpatrickmorgan/NavigationBackport.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.7.4;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1109,6 +1121,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DCE73E062947D082004EE92E /* XCRemoteSwiftPackageReference "swift-identified-collections" */;
 			productName = IdentifiedCollections;
+		};
+		EF9AB64129D2841600884E0E /* NavigationBackport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EF9AB64029D2841600884E0E /* XCRemoteSwiftPackageReference "NavigationBackport" */;
+			productName = NavigationBackport;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

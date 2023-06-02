@@ -1,3 +1,4 @@
+import NavigationBackport
 import SwiftUI
 import SwiftUINavigation
 
@@ -94,7 +95,7 @@ struct ItemView_Previews: PreviewProvider, View {
   @State var item = Item(color: nil, name: "", status: .inStock(quantity: 1))
 
   static var previews: some View {
-    NavigationStack {
+    NBNavigationStack {
       ItemView_Previews()
     }
   }

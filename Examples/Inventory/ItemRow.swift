@@ -1,3 +1,4 @@
+import NavigationBackport
 import SwiftUI
 import SwiftUINavigation
 import XCTestDynamicOverlay
@@ -123,7 +124,7 @@ struct ItemRowView: View {
         unwrapping: self.$model.destination,
         case: /ItemRowModel.Destination.duplicate
       ) { $item in
-        NavigationStack {
+        NBNavigationStack {
           ItemView(item: $item)
             .navigationBarTitle("Duplicate")
             .toolbar {
