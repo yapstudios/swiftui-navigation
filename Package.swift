@@ -25,7 +25,7 @@ let package = Package(
     .package(url: "https://github.com/pointfreeco/swift-case-paths", from: "1.0.0"),
     .package(url: "https://github.com/pointfreeco/swift-custom-dump", from: "1.0.0"),
     .package(url: "https://github.com/pointfreeco/xctest-dynamic-overlay", from: "1.0.0"),
-    .package(url: "https://github.com/johnpatrickmorgan/NavigationBackport", exact: "0.9.0")
+    .package(url: "https://github.com/yapstudios/NavigationBackport", exact: "0.9.0-e29d7d9")
   ],
   targets: [
     .target(
